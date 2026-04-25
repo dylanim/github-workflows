@@ -36,11 +36,13 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4
+        with:
+          fetch-depth: 0
 
       - name: Super Linter
         uses: super-linter/super-linter@v7
         env:
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: ${{ github.ref_name }}
           GITHUB_TOKEN: ${{ github.token }}
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_TYPESCRIPT_ES: true
