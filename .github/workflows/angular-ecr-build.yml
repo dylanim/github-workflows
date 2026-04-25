@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4
 
       - name: Super Linter
-        uses: super-linter/super-linter@85b1c70a7fa1cf7e44d44a6f7a68bedf7f94a4f6  # v7
+        uses: super-linter/super-linter@v7
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ github.token }}
